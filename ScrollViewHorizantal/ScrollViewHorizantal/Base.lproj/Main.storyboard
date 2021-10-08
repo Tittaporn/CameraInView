@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewHorizantal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NV-gk-AG6">
+                                <rect key="frame" x="0.0" y="68" width="414" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" id="wSz-kj-qww">
+                                        <rect key="frame" x="0.0" y="0.0" width="420" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <viewLayoutGuide key="safeArea" id="PxJ-HB-yvL"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Sw5-zR-z9p"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Ajr-GG-D6g"/>
+                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EE1-F4-65j">
+                                <rect key="frame" x="41.5" y="242" width="331" height="537.5"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ox7-xa-Rf5">
+                                <rect key="frame" x="20" y="799.5" width="374" height="42.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEy-zx-Tf9">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="42.5"/>
+                                        <state key="normal" image="camera.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhotoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0C5-rO-Fnv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv0-zX-cqM">
+                                        <rect key="frame" x="207" y="0.0" width="167" height="42.5"/>
+                                        <state key="normal" image="arrow.right" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4A-uB-BTg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-wl-XmU">
+                                <rect key="frame" x="41" y="242" width="332" height="538"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="photoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evN-ur-0sC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EE1-F4-65j" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="1mV-dE-xrR"/>
+                            <constraint firstItem="EE1-F4-65j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5UT-5l-Kkr"/>
+                            <constraint firstItem="Ox7-xa-Rf5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AXv-76-DAf"/>
+                            <constraint firstItem="cQW-wl-XmU" firstAttribute="trailing" secondItem="EE1-F4-65j" secondAttribute="trailing" id="Dim-fr-0Wl"/>
+                            <constraint firstItem="cQW-wl-XmU" firstAttribute="bottom" secondItem="EE1-F4-65j" secondAttribute="bottom" id="Gkt-b5-FFq"/>
+                            <constraint firstItem="cQW-wl-XmU" firstAttribute="leading" secondItem="EE1-F4-65j" secondAttribute="leading" id="Sy1-xe-IOi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ox7-xa-Rf5" secondAttribute="trailing" constant="20" id="WBn-Ml-eVg"/>
+                            <constraint firstItem="EE1-F4-65j" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="Zdr-PW-d5d"/>
+                            <constraint firstItem="Ox7-xa-Rf5" firstAttribute="top" secondItem="EE1-F4-65j" secondAttribute="bottom" constant="20" id="bah-Xp-8MZ"/>
+                            <constraint firstItem="cQW-wl-XmU" firstAttribute="top" secondItem="EE1-F4-65j" secondAttribute="top" id="goR-yf-xEA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ox7-xa-Rf5" secondAttribute="bottom" constant="20" id="tXx-35-VxI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNext" destination="Jv0-zX-cqM" id="ysi-k9-z80"/>
+                        <outlet property="btnPhoto" destination="cQW-wl-XmU" id="Yu0-Vr-RCK"/>
+                        <outlet property="btnTakePhoto" destination="VEy-zx-Tf9" id="TW6-Dh-GR9"/>
+                        <outlet property="horizontalScroll" destination="wSz-kj-qww" id="2bX-ns-5T4"/>
+                        <outlet property="imageViewPhotoTaken" destination="EE1-F4-65j" id="YzS-ye-qvn"/>
+                        <outlet property="scrollView" destination="7NV-gk-AG6" id="y3J-87-aWK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
